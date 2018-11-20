@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "destiny": {
+            "type": "object",
+            "properties": {
+                "version": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                }
+            },
+            "required": ["version", "path"]
+        },
+        "destiny2": {
+            "type": "object",
+            "properties": {
+                "version": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                }
+            },
+            "required": ["version", "path"]
+        }
+    },
+    "required": ["destiny", "destiny2"]
+}

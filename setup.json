@@ -1,0 +1,14 @@
+{
+  "install": {
+    "manifest_versions": {
+      "destiny": {
+        "version": "0",
+        "path": "https://www.bungie.net/"
+      },
+      "destiny2": {
+        "version": "0",
+        "path": "https://www.bungie.net/"
+      }
+    }
+  }
+}
