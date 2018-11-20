@@ -28,9 +28,9 @@ The bot supports three lore sources:
 3. *records* - Lore in Destiny 2 associated with accomplishments within the game
 
 ### Searching
-Like all Discord bots, the search is initiated from within Discord by a user who types **!lore**. Anything that follows the command prefix is considered search criteria. The search criteria is parsed by the Whoosh library and the query is executed against the index. Whoosh functions like a search engine and supports a lot of the syntax that Apache Lucene supports. The search capabilities are very comprehensive and the [Whoosh documentation](https://whoosh.readthedocs.io/en/latest/) is outstanding.
+Like all Discord bots, the search is initiated from within Discord by a user who types **!lore**. Anything that follows the command prefix is considered search criteria. The search criteria is parsed by the Whoosh library and the query is executed against the index. Whoosh functions like a search engine and the search capabilities are very comprehensive and the [Whoosh documentation](https://whoosh.readthedocs.io/en/latest/) is outstanding.
 
-Most importantly, the Whoosh library allows a user to isolate the search as desired. By default, a search is performed against all lore sources. However, a user can isolate a search to a specific type of lore. The following command:
+Most importantly, the Whoosh library allows a user to isolate a search as much, or as little, as desired. By default, a search is performed against all lore sources. However, a user can isolate a search to a specific type of lore. The following command:
 
 ```!lore type:grimoire omnigul```
 
