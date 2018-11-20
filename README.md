@@ -40,8 +40,8 @@ The Whoosh library also supports operators such as AND, NOT, and OR and parenthe
 
 ```!lore (eris AND ikora) AND NOT (zavala OR asher)```
 
-Search phrases are also supported. Normally the search ```!lore king's fall``` would be parsed to 
-```king AND fall``` and any documents that contained both terms would be returned. Instead, a user can search on ```!lore "king's fall"``` and only documents that contain the phrase *king's fall* are returned.
+Search phrases are also supported. By default, the search ```!lore king's fall``` is parsed to 
+```king AND fall``` and any documents that contain both terms are returned. To be more precise, a user can search on ```!lore "king's fall"``` and only documents that contain the phrase *king's fall* are returned.
 
 Finally, users can isolate a search based on any of the fields stored in the schema. For example:
 
@@ -53,4 +53,4 @@ will return only grimoire lore that contains the phrase *king's fall* in the nam
 Bungie does release updates to the mobile manifest files periodically. As a result, the bot periodically checks to see if a new version of either of the mobile manifest files exists. If one or both files have newer versions, the bot will download, unzip, and rebuild the underlying search index. The frequency of the check can be set in the [bot configuration]().
 
 ## Logging
-The bot does have one external dependency that can easily be removed. The bot logs metadata for requests to MongoDB through Amazon Simple Queue Service (SQS). Every message to the bot sends a message to the queue. The queue in turn triggers an AWS Lambda function that picks up the message and writes the metadata to MongoDB.
+The bot does have one external dependency that can easily be removed or altered. The bot logs metadata for requests to MongoDB through Amazon Simple Queue Service (SQS) and AWS Lambda. Every message to the bot put a message on the queue. The queue in turn triggers a Lambda function that picks up the message and writes the metadata to MongoDB.
