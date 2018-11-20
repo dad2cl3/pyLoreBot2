@@ -1,4 +1,4 @@
-import json, os, requests, sqlite3, time, zipfile
+import json, os, requests, sqlite3, sys, time, zipfile
 from whoosh import index, writing
 import scrubber
 
