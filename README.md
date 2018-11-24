@@ -1,10 +1,12 @@
 # Introduction
-**Another** Discond bot for searching Destiny and Destiny 2 lore written in Python.
+**Another** Discond bot for searching Destiny and Destiny 2 lore written in Python which can be invited using this [link]().
 
 ## Dependencies
 [Whoosh](https://pypi.org/project/Whoosh/) - Pure Python full text index and search library.
 
 [requests](https://pypi.org/project/requests/) - Well-known Python HTTP requests library.
+
+[jsonschema](https://pypi.org/project/jsonschema/) - Python JSON schema library
 
 ## Search Capabilities
 Whoosh relies upon a user-defined schema that defines how documents are indexed and what is stored within the index and how the index can be searched and sorted. The *lore* schema defines the following fields:
