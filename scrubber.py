@@ -1,6 +1,6 @@
 import json
 
-with open ('grimoire_cleanup.json', 'r') as grimoire_cleanup_file:
+with open ('grimoire_cleanup.json', 'r', encoding='utf-8') as grimoire_cleanup_file:
     cleanup_params = json.load(grimoire_cleanup_file)
 
 def scrub(raw_string):
