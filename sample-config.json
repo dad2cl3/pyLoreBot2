@@ -1,0 +1,47 @@
+{
+  "command_prefix": "!lore",
+  "refresh_interval": 120,
+  "discord_token": "YOUR-DISCORD-TOKEN",
+  "admin": {
+    "webhook": "YOUR-WEBHOOK-URL",
+    "join": "LoreBot has joined {0}",
+    "leave": "LoreBot has left {0}"
+  },
+  "footer": {
+    "icon_url": "YOUR-ICON-URL",
+    "text": "YOUR-FOOTER-TEXT"
+  },
+  "lore": {
+    "types": ["grimoire", "inventory", "records"]
+  },
+  "index": {
+    "directory": "indices",
+    "name": "lore"
+  },
+  "data": {
+    "directory": "data"
+  },
+  "troll": {
+    "icon": "YOUR-TROLL-ICON",
+    "name": "Warlocks",
+    "item_screenshot": "YOUR-TROLL-IMAGE",
+    "description": "",
+    "subtitle": "*Best jump in the game! - GreatDaemon*"
+  },
+  "manifest": {
+    "api_key": "YOUR-BUNGIE-API-KEY",
+    "metadata": {
+      "destiny": {
+        "url": "https://www.bungie.net/d1/Platform/Destiny/Manifest/",
+        "file_name": "destiny-manifest.content"
+      },
+      "destiny2": {
+        "url": "https://www.bungie.net/Platform/Destiny2/Manifest/",
+        "file_name": "destiny2-manifest.content"
+      }
+    }
+  },
+  "aws": {
+    "sqs_url": "YOUR-SQS-URL"
+  }
+}
