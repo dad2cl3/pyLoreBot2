@@ -29,7 +29,7 @@ def main(search_string):
     start = time.time()
     with ix.searcher() as s:
         multi_sort = sorting.MultiFacet()
-        multi_sort.add_field('type')
+        multi_sort.add_field('source')
         multi_sort.add_field('name')
         hits = s.search(q, limit=None, sortedby=multi_sort, terms=True)
 
@@ -45,7 +45,7 @@ def main(search_string):
                 hit_field = hit_match[0]
                 hit_term = hit_match[1].decode('utf8')
 
-                if hit_field != 'type':
+                if hit_field != 'source':
 
                     term_search = re.compile('({0})'.format(hit_term), re.IGNORECASE)
 

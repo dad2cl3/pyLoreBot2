@@ -1,13 +1,16 @@
-import sys
+import json, sys
 from whoosh.fields import Schema, ID, TEXT, STORED
 from whoosh import index
 
+with open('config.json') as local_config_file:
+    config = json.load(local_config_file)
 
 def main():
     print('Creating lore index...')
     # set the schema for the index
     schema = Schema(
-        type=TEXT(stored=True,sortable=True),
+        game=TEXT(stored=True,sortable=True),
+        source=TEXT(stored=True,sortable=True),
         id=ID(stored=True),
         name=TEXT(stored=True,sortable=True),
         subtitle=TEXT(stored=True),
@@ -18,7 +21,7 @@ def main():
 
     # create the index for the schema
     try:
-        ix = index.create_in('indices', schema, indexname='lore')
+        ix = index.create_in(config['index']['directory'], schema, indexname=config['index']['name'])
         print('Lore index created...')
         return True
     except:

@@ -92,7 +92,7 @@ def load_grimoire(game_version):
         card_json = json.loads(item[0])
 
         card = {
-            'type': 'grimoire',
+            'source': 'grimoire',
             'id': card_json['cardId'],
             'name': scrubber.scrub(card_json['cardName']),
             'icon': 'https://www.bungie.net{0}'.format(card_json['highResolution']['image']['sheetPath']),
@@ -128,7 +128,8 @@ def load_grimoire(game_version):
     documents = 0
     for card in cards:
         writer.add_document(
-            type=card['type'],
+            game='destiny',
+            source=card['source'],
             id=u'{0}'.format(card['id']),
             name=card['name'],
             subtitle=card['subtitle'],
@@ -175,7 +176,7 @@ def load_inventory(game_version):
                 screenshot_url = ''
 
             item = {
-                'type': 'inventory',
+                'source': 'inventory',
                 'id': item_json['hash'],
                 'name': item_json['displayProperties']['name'],
                 'description': item_json['displayProperties']['description'],
@@ -219,7 +220,7 @@ def load_inventory(game_version):
         lore_details = lore[lore_hash]
 
         combined_item = {
-            'type': 'inventory',
+            'source': 'inventory',
             'id': u'{0}'.format(items[item]['id']),
             'name': lore_details['name'],
             'subtitle': lore_details['subtitle'],
@@ -239,7 +240,8 @@ def load_inventory(game_version):
     documents = 0
     for item in combined_items:
         writer.add_document(
-            type=item['type'],
+            game='destiny2',
+            source=item['source'],
             id=u'{0}'.format(item['id']),
             name=item['name'],
             subtitle=item['subtitle'],
@@ -328,7 +330,7 @@ def load_records(game_version):
         lore_details = lore[lore_hash]
 
         combined_item = {
-            'type': 'records',
+            'source': 'records',
             'id': u'{0}'.format(items[item]['id']),
             'name': lore_details['name'],
             'subtitle': lore_details['subtitle'],
@@ -348,7 +350,8 @@ def load_records(game_version):
     documents = 0
     for item in combined_items:
         writer.add_document(
-            type=item['type'],
+            game='destiny2',
+            source=item['source'],
             id=u'{0}'.format(item['id']),
             name=item['name'],
             subtitle=item['subtitle'],
