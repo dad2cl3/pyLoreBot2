@@ -188,7 +188,7 @@ async def on_message(message):
                 'channel_id': message.channel.id,
                 'channel_name': str(message.channel),
                 'timestamp': str(message.timestamp),
-                'results': search_results
+                'lore': search_results
             }
             # print(json.dumps(metadata, indent=4)) # debugging
             logging_response = log_metadata(metadata)
