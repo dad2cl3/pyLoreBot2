@@ -379,7 +379,8 @@ def load_manifest(manifest_metadata):
                 doc_writer = ix.writer()
 
                 # purge existing documents based on type
-                doc_writer.delete_by_term(fieldname='type', text='grimoire')
+                # doc_writer.delete_by_term(fieldname='type', text='grimoire')
+                doc_writer.delete_by_term(fieldname='source', text='grimoire')
                 doc_writer.commit()
                 print('Purged grimoire documents...')
 
@@ -393,7 +394,8 @@ def load_manifest(manifest_metadata):
                 doc_writer = ix.writer()
 
                 # purge existing documents based on type
-                doc_writer.delete_by_term(fieldname='type', text='inventory')
+                # doc_writer.delete_by_term(fieldname='type', text='inventory')
+                doc_writer.delete_by_term(fieldname='source', text='inventory')
                 doc_writer.commit()
                 print('Purged inventory documents...')
 
@@ -407,7 +409,8 @@ def load_manifest(manifest_metadata):
                 doc_writer = ix.writer()
 
                 # purge existing documents based on type
-                doc_writer.delete_by_term(fieldname='type', text='records')
+                # doc_writer.delete_by_term(fieldname='type', text='records')
+                doc_writer.delete_by_term(fieldname='source', text='records')
                 doc_writer.commit()
                 print('Purged records documents...')
 

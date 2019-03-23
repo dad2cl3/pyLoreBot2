@@ -13,7 +13,7 @@ def main(search_string):
     # define the parser to search across the three key fields
     qp = MultifieldParser(['name', 'subtitle', 'description'], schema=ix.schema)
 
-    print(search_string)
+    #print(search_string)
     # correct casing on search operators AND, NOT, and OR
     operators = ['and', 'not', 'or']
     for operator in operators:
