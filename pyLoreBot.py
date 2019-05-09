@@ -89,7 +89,7 @@ def build_embed(lore_entry):
 
     #lore_description = scrub(lore_description)
 
-    print('{0} - {1}'.format(lore_entry['name'], len(lore_description)))
+    print('{0} - {1}'.format(lore_entry['name'].encode('utf-8'), len(lore_description)))
 
     if len(lore_description) < 6000:
         if len(lore_description) > 1024:
